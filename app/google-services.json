@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "57759164340",
+    "firebase_url": "https://ta-akmal-fahruroji-2023-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "ta-akmal-fahruroji-2023",
+    "storage_bucket": "ta-akmal-fahruroji-2023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:57759164340:android:ab23fc42b97cebc84434e1",
+        "android_client_info": {
+          "package_name": "com.example.pemipiljagung"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "57759164340-ftv5pio4ab58hlko00ju363nof9bjges.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-XZEMjTpH9c9qpm7nVN5-0URvP0l2VBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "57759164340-ftv5pio4ab58hlko00ju363nof9bjges.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
