@@ -1,7 +1,7 @@
 package com.example.pemipiljagung;
 
 import static android.icu.text.ListFormatter.Type.OR;
-
+import android.Manifest;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -59,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
 
         readWrite(); //Mengambil function read write
         btnMode(); //Mengambil function button mode
+
+
     }
 
     private void readWrite() {
@@ -95,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
                     if (valMode == 1 && valRelay == 1) {
                         myRef.child("servo").setValue(1);
                     }
-                } else if (valMode == 2){
+                } else if (valMode == 2) {
                     btnAutoMode.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.button_pressed));
                     btnOn.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.button_default));
                     btnOff.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.button_default));
@@ -128,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View v) {
 
                         weightTarget = Integer.parseInt(txtWeightTarget.getText().toString());
-                        if (weightTarget <= 10){
+                        if (weightTarget <= 10) {
                             Toast.makeText(MainActivity.this,
                                     "Harus lebih dari 10 gram", Toast.LENGTH_LONG).show();
                         } else {
@@ -167,7 +169,6 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this,
                                 "Mode OFF", Toast.LENGTH_LONG).show();
                         viewWeightRead.setText("----");
-
                         myRef.setValue(0);
                     }
                 });
@@ -205,24 +206,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-   /* private void notificationAutoModeComplete() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            NotificationChannel channel =
-                    new NotificationChannel("My Notification", "My Notification", NotificationManager.IMPORTANCE_DEFAULT);
-
-            NotificationManager manager = getSystemService(NotificationManager.class);
-            manager.createNotificationChannel(channel);
-        }
-
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity.this, "My Notification")
-                .setContentText("Pemipil Jagung")
-                .setContentTitle("Auto Mode Telah Selesai")
-                .setContentText("Servo ditutup, silahkan diambil")
-                .setContentText("Masukkan kembali berat yang diinginkan")
-                .setAutoCancel(true);
-
-        NotificationManagerCompat managerCompat = NotificationManagerCompat.from(MainActivity.this);
-        managerCompat.notify(1, builder.build());
-    } */
 }
